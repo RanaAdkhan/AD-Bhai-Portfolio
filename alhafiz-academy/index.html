@@ -10,7 +10,7 @@
 <title>ALHAFIZ INTERNATIONAL ACADEMY | Best Online Quran Classes Worldwide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet" />
 <style>
 /* ============ THEME TOKENS ============ */
 :root{
@@ -18,7 +18,7 @@
   --ink:#f4efe2; --ink-dim:#c9c2ab; --line:rgba(212,175,55,.28);
   --card:rgba(255,255,255,.045); --card-2:rgba(255,255,255,.08);
   --radius:18px; --header-h:72px;
-  --font-d:"Marcellus",serif; --font-b:"Manrope",system-ui,sans-serif;
+  --font-d:"Playfair Display","Marcellus",serif; --font-logo:"Marcellus",serif; --font-b:"Manrope",system-ui,sans-serif;
   --font-ar:"Amiri",serif; --font-ur:"Noto Nastaliq Urdu",serif;
 }
 html[data-theme="white"]{--bg:#ffffff;--bg2:#f9f7f0;--deep:#ffffff;--accent:#b8912c;--ink:#17203a;--ink-dim:#4d5469;--line:rgba(140,110,30,.30);--card:#ffffff;--card-2:#fdf8ea;--gold:#8a6d14;--gold-2:#7c5f10;--gold-deep:#6d5208}
@@ -35,9 +35,8 @@ html[data-theme="white"] body{background:#ffffff}
 html[data-theme="white"] .card{box-shadow:0 12px 32px rgba(23,32,58,.08)}
 html[data-theme="white"] .course-card:hover{box-shadow:0 22px 44px rgba(23,32,58,.14)}
 html[data-theme="white"] header.site{box-shadow:0 6px 24px rgba(23,32,58,.06)}
-html[data-theme="white"] .hero{background:radial-gradient(1000px 480px at 75% -10%,rgba(201,162,39,.16),transparent 65%),radial-gradient(800px 420px at 8% 110%,rgba(212,175,55,.10),transparent 60%),#ffffff}
-html[data-theme="white"] #gl{opacity:.25}
-html[data-theme="white"] .oval-floor{background:radial-gradient(ellipse at center,rgba(184,145,44,.14),rgba(184,145,44,.04) 55%,transparent 72%);border-color:rgba(140,110,30,.25)}
+html[data-theme="white"] .hero{background:#ffffff}
+html[data-theme="white"] .oval-floor{background:radial-gradient(ellipse at center,rgba(184,145,44,.14),rgba(184,145,44,.04) 55%,transparent 72%)}
 html[data-theme="white"] .oval-center{box-shadow:0 24px 50px rgba(23,32,58,.18),0 0 34px rgba(184,145,44,.18)}
 html[data-theme="white"] .oval-center:hover{box-shadow:0 30px 60px rgba(23,32,58,.22),0 0 48px rgba(184,145,44,.3)}
 html[data-theme="white"] .video-frame{box-shadow:0 24px 50px rgba(23,32,58,.18)}
@@ -108,7 +107,6 @@ nav.main a:hover{color:var(--gold-2);background:var(--card)}
 .mobile-menu a{display:block;color:var(--ink);text-decoration:none;font-weight:700;padding:12px 6px;border-bottom:1px solid rgba(255,255,255,.06)}
 /* ============ HERO ============ */
 .hero{padding:14px 0 0;overflow:hidden;display:flex;flex-direction:column;height:calc(100vh - 109px);height:calc(100dvh - 109px);min-height:600px;background:radial-gradient(1000px 480px at 75% -10%,color-mix(in srgb,var(--accent) 42%,transparent),transparent 65%),radial-gradient(800px 420px at 8% 110%,rgba(212,175,55,.14),transparent 60%),var(--bg)}
-#gl{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none}
 .hero-center{position:relative;text-align:center;z-index:3;flex-shrink:0}
 .hero h1{font-size:clamp(1.9rem,4.2vw,2.55rem);max-width:900px;margin:.25em auto 0}
 .hero h1 em{font-style:normal;color:var(--gold)}
@@ -122,7 +120,7 @@ nav.main a:hover{color:var(--gold-2);background:var(--card)}
 .oval-stage{position:relative;flex:1 1 auto;height:auto;min-height:0;margin-top:6px;perspective:1200px;touch-action:pan-y;cursor:grab;z-index:2}
 .oval-stage.dragging{cursor:grabbing}
 .oval-tilt{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
-.oval-floor{position:absolute;left:50%;top:50%;width:min(1080px,96vw);height:76%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(ellipse at center,rgba(212,175,55,.16),rgba(212,175,55,.05) 55%,transparent 72%);border:1px solid rgba(212,175,55,.22);pointer-events:none}
+.oval-floor{position:absolute;left:50%;top:50%;width:min(1080px,96vw);height:76%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(ellipse at center,rgba(212,175,55,.16),rgba(212,175,55,.05) 55%,transparent 72%);pointer-events:none}
 .oval-card{position:absolute;left:50%;top:50%;width:clamp(100px,11.5vw,140px);aspect-ratio:3/4.4;margin:0;padding:0;border-radius:14px;overflow:hidden;border:1px solid rgba(212,175,55,.55);background:var(--bg2);box-shadow:0 22px 44px rgba(0,0,0,.5);cursor:pointer;will-change:transform,opacity;transition:box-shadow .25s,border-color .25s;text-align:left;font-family:inherit;color:#fff}
 .oval-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
 .oval-card .oc-name{position:absolute;left:0;right:0;bottom:0;padding:30px 10px 9px;background:linear-gradient(transparent,rgba(3,6,14,.92));font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;line-height:1.35}
@@ -312,6 +310,180 @@ footer p{color:var(--ink-dim);font-size:.92rem}
   .tb-sel{min-height:32px;font-size:.74rem;padding:2px 6px;max-width:40vw}
   .wa-float{left:14px;right:auto;bottom:78px}
 }
+/* ============ PROFESSIONAL POLISH — premium international-academy finish ============ */
+::selection{background:rgba(212,175,55,.35)}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;letter-spacing:.002em}
+h1,h2,h3{font-weight:600;letter-spacing:-.01em}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1200px;padding:0 24px}
+section{padding:96px 0}
+section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
+section.sec-alt{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+/* section headings — gold eyebrow with hairlines, confident title, calm sub */
+.kicker{display:flex;align-items:center;justify-content:center;gap:14px;font-size:.7rem;letter-spacing:.34em;margin:0 0 4px}
+.kicker::before,.kicker::after{content:"";width:30px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));flex-shrink:0}
+.kicker::after{background:linear-gradient(90deg,var(--gold),transparent)}
+.sec-title{font-size:clamp(2rem,4.6vw,2.9rem);line-height:1.14;margin:.32em auto .34em}
+.sec-sub{font-size:1.03rem;line-height:1.75;margin-bottom:52px}
+/* buttons & chips */
+.btn{letter-spacing:.07em;transition:transform .25s,box-shadow .25s,background .25s,border-color .25s}
+.btn:active{transform:translateY(0)}
+.btn-gold{box-shadow:0 8px 24px rgba(212,175,55,.26),inset 0 1px 0 rgba(255,255,255,.45)}
+.btn-ghost{border-color:var(--line)}
+.chip{padding:.5em 1.05em;box-shadow:0 1px 2px rgba(23,32,58,.05)}
+/* cards — hairline border, layered soft shadow, one radius everywhere */
+.card{border-radius:20px;padding:30px;box-shadow:0 1px 2px rgba(10,14,26,.05),0 14px 34px rgba(10,14,26,.07)}
+.course-card{transition:transform .3s,box-shadow .3s,border-color .3s}
+.flip-face{border-radius:20px;padding:30px;box-shadow:0 1px 2px rgba(10,14,26,.05),0 14px 34px rgba(10,14,26,.07)}
+.step{padding:38px 28px}
+/* top bar + sticky header */
+.topbar{letter-spacing:.01em}
+.topbar .wrap{padding-top:9px;padding-bottom:9px}
+header.site{backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4)}
+.nav{min-height:76px}
+.logo-mark{width:48px;height:48px}
+.logo-text b{font-family:var(--font-logo);font-size:1.06rem;letter-spacing:.18em}
+.logo-text span{font-size:.6rem}
+nav.main a{position:relative;padding:10px 7px}
+nav.main a::after{content:"";position:absolute;left:7px;right:7px;bottom:4px;height:2px;border-radius:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+nav.main a:hover::after{transform:scaleX(1)}
+.mobile-menu a{padding:13px 6px}
+/* hero — more air, stronger headline, balanced CTAs */
+.hero h1{font-size:clamp(2.25rem,4.8vw,3.3rem);line-height:1.13;font-weight:600;max-width:880px}
+.hero h1 em{font-style:italic;font-weight:600}
+.hero p.lead{font-size:1.07rem;line-height:1.75;max-width:720px;margin-top:14px}
+.hero-center>.chip{margin-top:10px}
+.banner-rot{margin-top:14px}
+#bannerText{font-size:.98rem}
+.hero-btns{gap:14px;margin:22px 0 14px}
+.hero-btns .btn{padding:1em 2.1em;font-size:.9rem}
+.hero-badges{gap:9px}
+.ring-hint{letter-spacing:.02em;padding-bottom:16px}
+.oval-center{border-radius:20px}
+.oc-body h3{font-weight:600}
+/* demo */
+.video-frame{border-radius:24px}
+.audio-card{padding:36px 32px}
+/* courses & features */
+.course-card h3{font-size:1.3rem;line-height:1.3}
+.course-card p{line-height:1.7}
+.course-ic{width:54px;height:54px;border-radius:16px}
+.tags span{padding:.34em .75em}
+/* pricing — four aligned plans, MOST POPULAR lifted with a gold frame */
+#priceGrid{grid-template-columns:repeat(4,1fr)!important;gap:20px;align-items:stretch}
+.price-card{padding:34px 24px 28px;border-radius:20px}
+.price-card h3{font-family:var(--font-b);font-weight:800;font-size:1.08rem;letter-spacing:.02em}
+.price{font-size:3rem;font-weight:600;line-height:1.1;margin-top:12px}
+.price-card ul{margin:18px 0 22px}
+.price-card li{padding:8px 0 8px 26px;border-bottom:1px solid var(--line)}
+.price-card li:last-child{border-bottom:none}
+.price-card.pop{border:2px solid var(--gold);transform:translateY(-10px);z-index:1}
+.pop-badge{top:-15px;padding:.62em 1.35em;font-size:.7rem;letter-spacing:.12em;box-shadow:0 8px 20px rgba(169,130,31,.35)}
+.curr-row{margin-bottom:42px}
+.curr-row button{padding:.6em 1.35em;transition:background .2s,box-shadow .2s,border-color .2s}
+.curr-row button:hover{border-color:var(--gold)}
+.curr-row button.on{box-shadow:0 6px 16px rgba(169,130,31,.28)}
+/* stats */
+.stats{gap:24px}
+.stat b{font-size:2.55rem;font-weight:600}
+.stat span{line-height:1.55;display:block;margin-top:4px}
+/* faculty */
+.faculty-card{padding:40px 34px}
+.faculty-card h3{font-weight:600}
+.avatar-ring{width:132px;height:132px}
+/* quran portal & library */
+.toolbar{gap:12px;margin-bottom:30px}
+.toolbar input,.toolbar select{border-radius:12px;padding:.68em 1.05em;box-shadow:0 1px 2px rgba(10,14,26,.05)}
+.toolbar input:focus,.toolbar select:focus{outline:2px solid var(--gold);outline-offset:1px}
+.surah-grid{gap:14px;padding:6px}
+.surah-item{border-radius:14px;padding:14px 16px;box-shadow:0 1px 2px rgba(10,14,26,.04);transition:border-color .2s,transform .2s,box-shadow .2s}
+.surah-item:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(10,14,26,.09)}
+.dua-card{padding:28px}
+.mini-btns button{transition:background .2s,border-color .2s}
+.mini-btns button:hover{border-color:var(--gold)}
+/* gallery / blog */
+.gal{gap:20px}
+.gal figure{border-radius:20px}
+.gal img{height:240px}
+.blog-card img{border-radius:14px}
+/* faq */
+.faq details{border-radius:16px;padding:6px 24px;box-shadow:0 1px 2px rgba(10,14,26,.04),0 10px 24px rgba(10,14,26,.05)}
+.faq summary{font-size:1.01rem;padding:16px 0}
+/* trial form */
+#trialForm{padding:38px;border-radius:24px}
+.field{gap:7px}
+.field label{font-size:.83rem;letter-spacing:.02em}
+.field input,.field select,.field textarea{border-radius:12px;padding:.78em 1em;transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(212,175,55,.16)}
+/* footer, modal, floats */
+footer{padding:72px 0 32px}
+footer h4{font-weight:600}
+.modal-box{border-radius:24px;padding:40px;box-shadow:0 40px 90px rgba(0,0,0,.55)}
+.wa-float{transition:transform .25s,box-shadow .25s}
+.wa-float:hover{transform:translateY(-3px)}
+.toast{letter-spacing:.02em}
+/* white theme — crisper hairlines, softer layered shadows, warm alt sections */
+html[data-theme="white"]{--line:rgba(120,95,25,.22)}
+html[data-theme="white"] .sec-alt{background:linear-gradient(180deg,#fbf9f2,#ffffff)}
+html[data-theme="white"] header.site{background:rgba(255,255,255,.92);box-shadow:0 1px 0 rgba(120,95,25,.08),0 10px 30px rgba(23,32,58,.05)}
+html[data-theme="white"] .card{box-shadow:0 1px 2px rgba(23,32,58,.04),0 14px 34px rgba(23,32,58,.06)}
+html[data-theme="white"] .course-card:hover{box-shadow:0 4px 8px rgba(23,32,58,.05),0 24px 48px rgba(23,32,58,.12);border-color:rgba(184,145,44,.55)}
+html[data-theme="white"] .price-card.pop{background:linear-gradient(175deg,#fffdf3,#ffffff 62%);box-shadow:0 6px 14px rgba(184,145,44,.12),0 30px 60px rgba(184,145,44,.20)}
+html[data-theme="white"] .field input,html[data-theme="white"] .field select,html[data-theme="white"] .field textarea{background:#ffffff;border-color:rgba(120,95,25,.28)}
+html[data-theme="white"] .toolbar input,html[data-theme="white"] .toolbar select{background:#ffffff}
+html[data-theme="white"] #trialForm{box-shadow:0 2px 4px rgba(23,32,58,.04),0 28px 60px rgba(23,32,58,.09)}
+html[data-theme="white"] .hero{background:#ffffff}
+@media(max-width:1100px){#priceGrid{grid-template-columns:repeat(2,1fr)!important}.price-card.pop{transform:none}}
+@media(max-width:1020px){section{padding:76px 0}}
+@media(max-width:860px){
+  section{padding:64px 0}
+  .sec-title{font-size:1.95rem}
+  .sec-sub{font-size:.98rem;margin-bottom:40px}
+  .card{padding:24px}
+  #trialForm{padding:26px 20px}
+  .modal-box{padding:28px 20px}
+  .hero h1{font-size:1.88rem;line-height:1.22}
+  .hero p.lead{font-size:.94rem;line-height:1.6}
+  .hero-btns .btn{padding:.8em 1.3em;font-size:.8rem}
+  .faculty-card{padding:30px 22px}
+  .audio-card{padding:26px 18px}
+}
+@media(max-width:640px){
+  .wrap{padding:0 16px}
+  #priceGrid{grid-template-columns:1fr!important}
+  .price-card{padding:30px 22px 26px}
+  .kicker{letter-spacing:.26em;font-size:.64rem;gap:10px}
+  .kicker::before,.kicker::after{width:20px}
+}
+@media(max-width:480px){.foot-grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+/* ============ FIT FIXES — header must fit desktop, mobile hero must not overlap ============ */
+.logo-mark{width:44px;height:44px}
+.logo-text b{font-size:.94rem;letter-spacing:.1em}
+.logo-text span{font-size:.56rem;letter-spacing:.26em}
+.nav{gap:10px}
+nav.main a{padding:9px 5px;font-size:.77rem}
+nav.main a::after{left:5px;right:5px}
+.nav-cta{gap:8px}
+.nav-cta .btn{padding:.78em 1.25em;font-size:.86rem}
+@media(max-width:860px){
+  .hero{height:auto;min-height:0}
+  .oval-stage{flex:none;height:340px;margin-top:8px}
+  .banner-rot{max-width:350px;margin-left:auto;margin-right:auto;padding:0 4px}
+  #bannerText{text-align:center}
+}
+@media(max-width:640px){
+  .topbar .wrap{flex-direction:column;align-items:stretch;gap:6px}
+  .tb-group{width:100%}
+  .tb-group:last-child{flex-direction:column;align-items:stretch;gap:6px;flex-wrap:nowrap}
+  .topbar label{display:flex;width:100%}
+  .tb-sel{flex:1;width:100%;max-width:none;min-height:36px;font-size:.8rem}
+  .oval-stage{height:320px}
+  .oval-card{width:76px}
+  .oval-center{width:140px}
+  .wa-float{left:auto;right:14px;bottom:14px;width:54px;height:54px}
+  .wa-float svg{width:28px;height:28px}
+}
 </style>
 </head>
 <body>
@@ -376,7 +548,6 @@ footer p{color:var(--ink-dim);font-size:.92rem}
 
 <!-- 3. HERO — Aurora-style oval 3D course ring -->
 <section class="hero" id="home">
-  <canvas id="gl" aria-hidden="true"></canvas>
   <div class="wrap hero-center">
     <span class="chip">✦ <span data-i18n="tagline">Best Online Quran Classes Worldwide</span></span>
     <div class="banner-rot"><span class="banner-dot"></span><span id="bannerText">3-Day Free Trial — No Credit Card Required</span></div>
@@ -399,7 +570,7 @@ footer p{color:var(--ink-dim);font-size:.92rem}
       <button class="oval-center" id="ovalCenter" type="button" aria-label="Open the full syllabus of the selected course"></button>
     </div>
   </div>
-  <p class="ring-hint">Drag or move your mouse to spin the ring · Click any course to preview it · Click the centre card to open its full syllabus</p>
+  <p class="ring-hint">Drag or move your mouse to spin the ring · Click any course to bring it to the centre · Click the centre card to open its full syllabus</p>
 </section>
 
 <!-- 4. DEMO VIDEO -->
@@ -733,7 +904,6 @@ footer p{color:var(--ink-dim);font-size:.92rem}
 </div></div>
 <div class="toast" id="toast">Copied ✓</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 /* ================= DATA ================= */
 var SURAHS=("Al-Fatihah|الفاتحة|7|Makkah,Al-Baqarah|البقرة|286|Madinah,Aal-e-Imran|آل عمران|200|Madinah,An-Nisa|النساء|176|Madinah,Al-Ma'idah|المائدة|120|Madinah,Al-An'am|الأنعام|165|Makkah,Al-A'raf|الأعراف|206|Makkah,Al-Anfal|الأنفال|75|Madinah,At-Tawbah|التوبة|129|Madinah,Yunus|يونس|109|Makkah,Hud|هود|123|Makkah,Yusuf|يوسف|111|Makkah,Ar-Ra'd|الرعد|43|Madinah,Ibrahim|إبراهيم|52|Makkah,Al-Hijr|الحجر|99|Makkah,An-Nahl|النحل|128|Makkah,Al-Isra|الإسراء|111|Makkah,Al-Kahf|الكهف|110|Makkah,Maryam|مريم|98|Makkah,Ta-Ha|طه|135|Makkah,Al-Anbiya|الأنبياء|112|Makkah,Al-Hajj|الحج|78|Madinah,Al-Mu'minun|المؤمنون|118|Makkah,An-Nur|النور|64|Madinah,Al-Furqan|الفرقان|77|Makkah,Ash-Shu'ara|الشعراء|227|Makkah,An-Naml|النمل|93|Makkah,Al-Qasas|القصص|88|Makkah,Al-Ankabut|العنكبوت|69|Makkah,Ar-Rum|الروم|60|Makkah,Luqman|لقمان|34|Makkah,As-Sajdah|السجدة|30|Makkah,Al-Ahzab|الأحزاب|73|Madinah,Saba|سبأ|54|Makkah,Fatir|فاطر|45|Makkah,Ya-Sin|يس|83|Makkah,As-Saffat|الصافات|182|Makkah,Sad|ص|88|Makkah,Az-Zumar|الزمر|75|Makkah,Ghafir|غافر|85|Makkah,Fussilat|فصلت|54|Makkah,Ash-Shura|الشورى|53|Makkah,Az-Zukhruf|الزخرف|89|Makkah,Ad-Dukhan|الدخان|59|Makkah,Al-Jathiyah|الجاثية|37|Makkah,Al-Ahqaf|الأحقاف|35|Makkah,Muhammad|محمد|38|Madinah,Al-Fath|الفتح|29|Madinah,Al-Hujurat|الحجرات|18|Madinah,Qaf|ق|45|Makkah,Adh-Dhariyat|الذاريات|60|Makkah,At-Tur|الطور|49|Makkah,An-Najm|النجم|62|Makkah,Al-Qamar|القمر|55|Makkah,Ar-Rahman|الرحمن|78|Madinah,Al-Waqi'ah|الواقعة|96|Makkah,Al-Hadid|الحديد|29|Madinah,Al-Mujadila|المجادلة|22|Madinah,Al-Hashr|الحشر|24|Madinah,Al-Mumtahanah|الممتحنة|13|Madinah,As-Saff|الصف|14|Madinah,Al-Jumu'ah|الجمعة|11|Madinah,Al-Munafiqun|المنافقون|11|Madinah,At-Taghabun|التغابن|18|Madinah,At-Talaq|الطلاق|12|Madinah,At-Tahrim|التحريم|12|Madinah,Al-Mulk|الملك|30|Makkah,Al-Qalam|القلم|52|Makkah,Al-Haqqah|الحاقة|52|Makkah,Al-Ma'arij|المعارج|44|Makkah,Nuh|نوح|28|Makkah,Al-Jinn|الجن|28|Makkah,Al-Muzzammil|المزمل|20|Makkah,Al-Muddaththir|المدثر|56|Makkah,Al-Qiyamah|القيامة|40|Makkah,Al-Insan|الإنسان|31|Madinah,Al-Mursalat|المرسلات|50|Makkah,An-Naba|النبأ|40|Makkah,An-Nazi'at|النازعات|46|Makkah,Abasa|عبس|42|Makkah,At-Takwir|التكوير|29|Makkah,Al-Infitar|الانفطار|19|Makkah,Al-Mutaffifin|المطففين|36|Makkah,Al-Inshiqaq|الانشقاق|25|Makkah,Al-Buruj|البروج|22|Makkah,At-Tariq|الطارق|17|Makkah,Al-A'la|الأعلى|19|Makkah,Al-Ghashiyah|الغاشية|26|Makkah,Al-Fajr|الفجر|30|Makkah,Al-Balad|البلد|20|Makkah,Ash-Shams|الشمس|15|Makkah,Al-Layl|الليل|21|Makkah,Ad-Duha|الضحى|11|Makkah,Ash-Sharh|الشرح|8|Makkah,At-Tin|التين|8|Makkah,Al-Alaq|العلق|19|Makkah,Al-Qadr|القدر|5|Madinah,Al-Bayyinah|البينة|8|Madinah,Az-Zalzalah|الزلزلة|8|Madinah,Al-Adiyat|العاديات|11|Madinah,Al-Qari'ah|القارعة|11|Makkah,At-Takathur|التكاثر|8|Makkah,Al-Asr|العصر|3|Makkah,Al-Humazah|الهمزة|9|Makkah,Al-Fil|الفيل|5|Makkah,Quraysh|قريش|4|Makkah,Al-Ma'un|الماعون|7|Makkah,Al-Kawthar|الكوثر|3|Makkah,Al-Kafirun|الكافرون|6|Makkah,An-Nasr|النصر|3|Madinah,Al-Masad|المسد|5|Makkah,Al-Ikhlas|الإخلاص|4|Makkah,Al-Falaq|الفلق|5|Madinah,An-Nas|الناس|6|Madinah").split(",").map(function(s){var p=s.split("|");return{name:p[0],ar:p[1],ayahs:+p[2],type:p[3]};});
@@ -952,7 +1122,7 @@ var RING_COURSES=[
  }
  function selectCourse(i,spinTo){
    sel=i;renderCenter();
-   if(spinTo){target=nearestTarget(i);idleUntil=performance.now()+5000}
+   if(spinTo){target=nearestTarget(i)}
  }
  center.addEventListener("click",function(){syllabus(sel)});
  var rot=0,target=null,vel=0.055,idleUntil=0,dragging=false,hovering=false,moved=0,lastX=0;
@@ -986,12 +1156,13 @@ var RING_COURSES=[
    tiltEl.style.transform="rotateX("+tiltX.toFixed(2)+"deg) rotateY("+tiltY.toFixed(2)+"deg)";
  }
  function frame(now){
-   if(!dragging&&!hovering&&now>idleUntil){
+   if(!dragging){
      if(target!==null){
+       /* clicked card: always glide to front centre, even while the pointer hovers */
        var d=target-rot;
-       rot+=d*0.09;
+       rot+=d*(reduce?1:0.09);
        if(Math.abs(d)<0.05){rot=target;target=null;idleUntil=now+2600}
-     }else{
+     }else if(!hovering&&now>idleUntil){
        rot+=vel;
      }
    }
@@ -1126,30 +1297,6 @@ $("#trialForm").addEventListener("submit",function(e){
  window.open("https://wa.me/923047809156?text="+encodeURIComponent(lines),"_blank");
  toast("Opening WhatsApp — press send to confirm your booking");
 });
-
-/* ================= 3D HERO BACKGROUND (Three.js) ================= */
-try{
- if(window.THREE){
-  var canvas=document.getElementById("gl");
-  var renderer=new THREE.WebGLRenderer({canvas:canvas,alpha:true,antialias:true});
-  var scene=new THREE.Scene();
-  var camera=new THREE.PerspectiveCamera(55,1,0.1,100);camera.position.z=9;
-  var gold=new THREE.MeshBasicMaterial({color:0xd4af37,wireframe:true,transparent:true,opacity:0.5});
-  var star=new THREE.Mesh(new THREE.IcosahedronGeometry(2.1,0),gold);star.position.set(3.4,0.4,0);scene.add(star);
-  var ringGeo=new THREE.TorusGeometry(3.1,0.02,8,90);
-  var ring3=new THREE.Mesh(ringGeo,new THREE.MeshBasicMaterial({color:0xd4af37,transparent:true,opacity:0.35}));
-  ring3.position.copy(star.position);ring3.rotation.x=1.1;scene.add(ring3);
-  var pGeo=new THREE.BufferGeometry();var pts=[];
-  for(var i=0;i<260;i++){pts.push((Math.random()-0.5)*22,(Math.random()-0.5)*12,(Math.random()-0.5)*6)}
-  pGeo.setAttribute("position",new THREE.Float32BufferAttribute(pts,3));
-  scene.add(new THREE.Points(pGeo,new THREE.PointsMaterial({color:0xf0d47a,size:0.045,transparent:true,opacity:0.8})));
-  var mx=0,my=0;
-  document.addEventListener("mousemove",function(e){mx=(e.clientX/innerWidth-0.5);my=(e.clientY/innerHeight-0.5)});
-  function size(){var w=canvas.clientWidth||innerWidth;var h=canvas.clientHeight||500;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}
-  size();addEventListener("resize",size);
-  (function anim(){requestAnimationFrame(anim);star.rotation.y+=0.0028;star.rotation.x+=0.0012;ring3.rotation.z+=0.0016;camera.position.x+=((mx*1.4)-camera.position.x)*0.03;camera.position.y+=((-my*0.9)-camera.position.y)*0.03;camera.lookAt(1,0,0);renderer.render(scene,camera)})();
- }
-}catch(err){/* 3D background is decorative — page works without it */}
 </script>
 </body>
 </html>
