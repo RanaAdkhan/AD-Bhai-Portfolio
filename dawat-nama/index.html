@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>دعوت نامہ بنائیں — جامعہ اسلامیہ باب العلوم</title>
+<link rel="preload" as="font" type="font/woff" crossorigin href="https://cdn.jsdelivr.net/gh/tariq-abdullah/urdu-web-font-CDN/JameelNooriNastaleeq.woff">
 <style>
 @font-face {
   font-family: "Jameel Noori Nastaleeq";
@@ -95,6 +96,22 @@ const msg = document.getElementById('msg');
 const W = 1055, H = 1491;
 // نام والی جگہ: سفید پٹی (بخدمت جناب) — مرکز x=197، مرکز y=1126، زیادہ سے زیادہ چوڑائی 284
 const NAME_CX = 197, NAME_CY = 1126, NAME_MAX_W = 284, NAME_SIZE = 76;
+let fontReady = false;
+let fontLoading = false;
+let fontTries = 0;
+
+async function ensureFont() {
+  if (!document.fonts || fontReady || fontLoading || fontTries >= 3) return;
+  fontLoading = true;
+  fontTries++;
+  try {
+    await document.fonts.load('76px "Jameel Noori Nastaleeq"');
+    fontReady = document.fonts.check('76px "Jameel Noori Nastaleeq"');
+  } catch (e) { fontReady = false; }
+  fontLoading = false;
+  if (!fontReady && fontTries >= 3) msg.textContent = 'فونٹ لوڈ نہیں ہو سکا — انٹرنیٹ چیک کر کے صفحہ دوبارہ کھولیں۔';
+  draw();
+}
 
 const poster = new Image();
 let posterReady = false;
@@ -116,6 +133,13 @@ function draw() {
   if (posterReady) ctx.drawImage(poster, 0, 0, W, H);
   const name = input.value.trim();
   if (!name) return;
+  if (!fontReady) {
+    if (fontTries >= 3) { msg.textContent = 'فونٹ لوڈ نہیں ہو سکا — انٹرنیٹ چیک کر کے صفحہ دوبارہ کھولیں۔'; return; }
+    msg.textContent = 'فونٹ لوڈ ہو رہا ہے — چند لمحے انتظار کریں...';
+    ensureFont();
+    return;
+  }
+  msg.textContent = '';
   const size = fitFont(name);
   ctx.font = size + 'px "Jameel Noori Nastaleeq", serif';
   ctx.fillStyle = '#141414';
@@ -129,8 +153,8 @@ function draw() {
 }
 
 input.addEventListener('input', draw);
+ensureFont();
 if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
-if (document.fonts) document.fonts.load('76px "Jameel Noori Nastaleeq"').then(draw);
 
 function needName() {
   if (!input.value.trim()) {
@@ -143,6 +167,7 @@ function needName() {
 
 document.getElementById('dlBtn').addEventListener('click', () => {
   if (!needName()) return;
+  if (!fontReady) { msg.textContent = 'فونٹ ابھی لوڈ ہو رہا ہے — چند لمحے انتظار کریں، پھر دوبارہ کوشش کریں۔'; ensureFont(); return; }
   canvas.toBlob(blob => {
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
@@ -155,6 +180,7 @@ document.getElementById('dlBtn').addEventListener('click', () => {
 
 document.getElementById('waBtn').addEventListener('click', async () => {
   if (!needName()) return;
+  if (!fontReady) { msg.textContent = 'فونٹ ابھی لوڈ ہو رہا ہے — چند لمحے انتظار کریں، پھر دوبارہ کوشش کریں۔'; ensureFont(); return; }
   msg.textContent = '';
   canvas.toBlob(async blob => {
     const file = new File([blob], 'dawat-nama.png', { type: 'image/png' });
