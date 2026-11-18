@@ -4,13 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>دعوت نامہ بنائیں — جامعہ اسلامیہ باب العلوم</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: "Jameel Noori Nastaleeq";
+  src: url("https://cdn.jsdelivr.net/gh/tariq-abdullah/urdu-web-font-CDN/JameelNooriNastaleeq.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+</style>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: 'Noto Nastaliq Urdu', serif;
+    font-family: 'Jameel Noori Nastaleeq', serif;
     background: #2b0d0d;
     color: #fff8e7;
     min-height: 100vh;
@@ -22,7 +28,7 @@
   label { display: block; font-size: 17px; line-height: 2; margin-bottom: 4px; color: #fff; }
   input {
     width: 100%;
-    font-family: 'Noto Nastaliq Urdu', serif;
+    font-family: 'Jameel Noori Nastaleeq', serif;
     font-size: 20px;
     line-height: 2.2;
     padding: 2px 16px;
@@ -46,7 +52,7 @@
   }
   .btns { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
   button {
-    font-family: 'Noto Nastaliq Urdu', serif;
+    font-family: 'Jameel Noori Nastaleeq', serif;
     font-size: 18px;
     line-height: 2.1;
     padding: 2px 18px 6px;
@@ -88,7 +94,7 @@ const input = document.getElementById('guestName');
 const msg = document.getElementById('msg');
 const W = 1055, H = 1491;
 // نام والی جگہ: سفید پٹی (بخدمت جناب) — مرکز x=222، مرکز y=1190، زیادہ سے زیادہ چوڑائی 330
-const NAME_CX = 222, NAME_CY = 1190, NAME_MAX_W = 330, NAME_SIZE = 68;
+const NAME_CX = 222, NAME_CY = 1190, NAME_MAX_W = 330, NAME_SIZE = 76;
 
 const poster = new Image();
 let posterReady = false;
@@ -97,10 +103,10 @@ poster.src = POSTER;
 
 function fitFont(name) {
   let size = NAME_SIZE;
-  ctx.font = size + 'px "Noto Nastaliq Urdu", serif';
+  ctx.font = size + 'px "Jameel Noori Nastaleeq", serif';
   while (size > 28 && ctx.measureText(name).width > NAME_MAX_W) {
     size -= 2;
-    ctx.font = size + 'px "Noto Nastaliq Urdu", serif';
+    ctx.font = size + 'px "Jameel Noori Nastaleeq", serif';
   }
   return size;
 }
@@ -111,16 +117,20 @@ function draw() {
   const name = input.value.trim();
   if (!name) return;
   const size = fitFont(name);
-  ctx.font = size + 'px "Noto Nastaliq Urdu", serif';
+  ctx.font = size + 'px "Jameel Noori Nastaleeq", serif';
   ctx.fillStyle = '#141414';
+  ctx.strokeStyle = '#141414';
+  ctx.lineWidth = 2.5;
+  ctx.lineJoin = 'round';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
+  ctx.strokeText(name, NAME_CX, NAME_CY);
   ctx.fillText(name, NAME_CX, NAME_CY);
 }
 
 input.addEventListener('input', draw);
 if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
-if (document.fonts) document.fonts.load('68px "Noto Nastaliq Urdu"').then(draw);
+if (document.fonts) document.fonts.load('76px "Jameel Noori Nastaleeq"').then(draw);
 
 function needName() {
   if (!input.value.trim()) {
